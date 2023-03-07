@@ -1,0 +1,151 @@
+<OpenViBE-Scenario>
+	<FormatVersion>2</FormatVersion>
+	<Creator>OpenViBE Designer</Creator>
+	<CreatorVersion>3.2.0</CreatorVersion>
+	<Settings></Settings>
+	<Inputs></Inputs>
+	<Outputs></Outputs>
+	<Boxes>
+		<Box>
+			<Identifier>(0x0000572a, 0x00000d53)</Identifier>
+			<Name>CSV File Reader</Name>
+			<AlgorithmClassIdentifier>(0x336a3d9a, 0x753f1ba4)</AlgorithmClassIdentifier>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Output stream</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Output stimulation</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename</Name>
+					<DefaultValue></DefaultValue>
+					<Value>C:/Users/seohyunseo/Desktop/BCIMusic/Data/sample_data_8000.csv</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>208</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>576</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xb7b8f4f9, 0xb979c65c)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00007fe1, 0x000042bc)</Identifier>
+			<Name>Python 3 scripting</Name>
+			<AlgorithmClassIdentifier>(0x5dc4f669, 0xd3fd4d63)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0x4d61c8bd, 0xbd707155)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>New input</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Clock frequency (Hz)</Name>
+					<DefaultValue>64</DefaultValue>
+					<Value>64</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
+					<Name>Script</Name>
+					<DefaultValue></DefaultValue>
+					<Value>C:/Users/seohyunseo/Desktop/PythonWorkspace/OVToMax.py</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x17ee7c08, 0x94c14893)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>288</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>576</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x2a651510, 0xb4fad0d4)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x527ad68d, 0x16d746a0)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x61d11811, 0x71e65362)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xf191c1c8, 0xa0123976)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links>
+		<Link>
+			<Identifier>(0x00007036, 0x00007f95)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x0000572a, 0x00000d53)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00007fe1, 0x000042bc)</BoxIdentifier>
+				<BoxInputIdentifier>(0x4d61c8bd, 0xbd707155)</BoxInputIdentifier>
+			</Target>
+		</Link>
+	</Links>
+	<Comments></Comments>
+	<Metadata>
+		<Entry>
+			<Identifier>(0x00004947, 0x000051b5)</Identifier>
+			<Type>(0x3bcce5d2, 0x43f2d968)</Type>
+			<Data>[{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"height":320,"identifier":"(0x00006e52, 0x00003044)","name":"Default window","parentIdentifier":"(0xffffffff, 0xffffffff)","type":1,"width":480},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"identifier":"(0x00007ed4, 0x0000371f)","index":0,"name":"Default tab","parentIdentifier":"(0x00006e52, 0x00003044)","type":2},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":0,"identifier":"(0x00003ebb, 0x00000126)","index":0,"name":"Empty","parentIdentifier":"(0x00007ed4, 0x0000371f)","type":0}]</Data>
+		</Entry>
+	</Metadata>
+</OpenViBE-Scenario>

@@ -1,0 +1,247 @@
+<OpenViBE-Scenario>
+	<FormatVersion>2</FormatVersion>
+	<Creator>OpenViBE Designer</Creator>
+	<CreatorVersion>3.2.0</CreatorVersion>
+	<Settings></Settings>
+	<Inputs></Inputs>
+	<Outputs></Outputs>
+	<Boxes>
+		<Box>
+			<Identifier>(0x000003d7, 0x0000419f)</Identifier>
+			<Name>Acquisition client</Name>
+			<AlgorithmClassIdentifier>(0x35d225cb, 0x3e6e3a5f)</AlgorithmClassIdentifier>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Experiment information</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Signal stream</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulations</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x013df452, 0xa3a8879a)</TypeIdentifier>
+					<Name>Channel localisation</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x6ab26b81, 0x0f8c02f3)</TypeIdentifier>
+					<Name>Channel units</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Acquisition server hostname</Name>
+					<DefaultValue>${AcquisitionServer_HostName}</DefaultValue>
+					<Value>${AcquisitionServer_HostName}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Acquisition server port</Name>
+					<DefaultValue>1024</DefaultValue>
+					<Value>1024</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>96</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>400</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x0d4656c0, 0xc95b1fa8)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>5</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x000067c1, 0x00001f8c)</Identifier>
+			<Name>CSV File Writer</Name>
+			<AlgorithmClassIdentifier>(0x428375e8, 0x325f2db9)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input stream</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulations stream</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename</Name>
+					<DefaultValue>record-[$core{date}-$core{time}].csv</DefaultValue>
+					<Value>C:/Users/seohyunseo/Desktop/BCIMusic/Data/sample2_data_8000.csv</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Precision</Name>
+					<DefaultValue>10</DefaultValue>
+					<Value>10</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Append data</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Only last matrix</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>224</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>400</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xc33e47e0, 0x70e5f31b)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x527ad68d, 0x16d746a0)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>4</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00007ad7, 0x000055e6)</Identifier>
+			<Name>Signal Resampling</Name>
+			<AlgorithmClassIdentifier>(0x0e923a5e, 0xda474058)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input signal</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Output signal</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x158a8efd, 0xaa894f86)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>New Sampling Frequency</Name>
+					<DefaultValue>128</DefaultValue>
+					<Value>250</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x588783f3, 0x8e8dcf86)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Sample Count Per Buffer</Name>
+					<DefaultValue>8</DefaultValue>
+					<Value>8</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xafdd8efd, 0x23ef94f6)</Identifier>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Low Pass Filter Signal Before Downsampling</Name>
+					<DefaultValue>true</DefaultValue>
+					<Value>true</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>160</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>400</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x02f4ed49, 0x2f30f51c)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links>
+		<Link>
+			<Identifier>(0x00000636, 0x0000773a)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00007ad7, 0x000055e6)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x000067c1, 0x00001f8c)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000038ef, 0x000069c2)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000003d7, 0x0000419f)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00007ad7, 0x000055e6)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+	</Links>
+	<Comments></Comments>
+	<Metadata>
+		<Entry>
+			<Identifier>(0x00007a84, 0x00004457)</Identifier>
+			<Type>(0x3bcce5d2, 0x43f2d968)</Type>
+			<Data>[{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"height":320,"identifier":"(0x00006bd5, 0x00007c74)","name":"Default window","parentIdentifier":"(0xffffffff, 0xffffffff)","type":1,"width":480},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"identifier":"(0x000072bb, 0x00005e2e)","index":0,"name":"Default tab","parentIdentifier":"(0x00006bd5, 0x00007c74)","type":2},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":0,"identifier":"(0x00001ce9, 0x000059b1)","index":0,"name":"Empty","parentIdentifier":"(0x000072bb, 0x00005e2e)","type":0}]</Data>
+		</Entry>
+	</Metadata>
+</OpenViBE-Scenario>
